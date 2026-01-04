@@ -8,7 +8,7 @@ class Tour:
     costo: float
     id_regione: str
 
-    # RELAZIONE (N:N)
+    # RELAZIONE (N:N)  #dunque ogni oggetto tour conterrà un set di ogg attrazioni
     attrazioni: set = field(default_factory=set)
 
     def __eq__(self, other):

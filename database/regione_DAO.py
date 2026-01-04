@@ -1,14 +1,11 @@
 from database.DB_connect import DBConnect
-from model.regione import Regione
 
 class RegioneDAO:
     
     @staticmethod
-    def get_regioni() -> list[Regione] | None:
-        """
-        Restituisce tutte le regioni
-        :return: lista di tutte le Regioni
-        """
+    def get_regioni() :  # lista di oggetti
+        """Restituisce tutte le regioni:return: lista di tutte le Regioni"""
+        from model.regione import Regione
         cnx = DBConnect.get_connection()
         result = []
 
@@ -17,7 +14,7 @@ class RegioneDAO:
             return None
 
         cursor = cnx.cursor(dictionary=True)
-        query = """ ADD YOUR QUERY """ # TODO
+        query = '''SELECT * FROM regione'''
         try:
             cursor.execute(query)
             for row in cursor:

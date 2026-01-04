@@ -6,7 +6,7 @@ class Attrazione:
     nome: str
     valore_culturale: int
 
-    # RELAZIONE (N:N)
+    # set in cui aggiungo tutti gli ogg tour associati
     tour: set = field(default_factory=set)
 
     def __eq__(self, other):
