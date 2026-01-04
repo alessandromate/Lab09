@@ -36,7 +36,7 @@ class View:
         # Regioni
         self.dd_regione = ft.Dropdown(
             label="Regione",
-            menu_height=150,
+            height=150,
             width=200,
             hint_text="Selezionare una regione",
             on_change=self.controller.on_regione_change
@@ -84,7 +84,7 @@ class View:
             ft.Container(
                 content=self.lista_visualizzazione,
                 height=250,
-                border=ft.border.all(1, ft.Colors.BLACK),
+                border=ft.border.all(1, ft.colors.BLACK),
                 padding=10,
             )
         )
